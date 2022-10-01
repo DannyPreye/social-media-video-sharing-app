@@ -41,17 +41,17 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
                     <div className='md:w-16 md:h-16 h-10 w-10'>
                         <Link href='/profile'>
                             <>
-                                <Image width={62} height={62} className='rounded-full' src={post.postedBy.image} alt={post.postedBy.username} layout='responsive' />
+                                <Image width={62} height={62} className='rounded-full' src={post.postedBy?.image} alt={post.postedBy?.username} layout='responsive' />
                             </>
                         </Link>
                     </div>
                     <div>
                         <Link href={'/'}>
                             <div className='flex items-center gap-2 '>
-                                <p className='flex gap-2 items-center md:text-md font-bold text-primary'>{post.postedBy.username} {' '}
+                                <p className='flex gap-2 items-center md:text-md font-bold text-primary'>{post.postedBy?.username} {' '}
                                     <GoVerified className='text-blue-400 text-md' />
                                 </p>
-                                <p className='capitalize  font-md text-xs text-gray-500 hidden md:block'>{post.postedBy.username}</p>
+                                <p className='capitalize  font-md text-xs text-gray-500 hidden md:block'>{post.postedBy?.username}</p>
                             </div>
                         </Link>
                     </div>
@@ -60,7 +60,7 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
 
             <div className='lg:ml-20  flex gap-4 relative'>
                 <div className="rounded-3xl" onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
-                    <Link href='/'>
+                    <Link href={`/detail/${post._id}`}>
                         <video ref={videoRef} src={post.video.asset.url} loop className='lg:w-[600px] h-[300px] md:h-[400px] lg:h-[530px] w-[200px] rounded-2xl bg-gray-100'></video>
                     </Link>
                     {isHover && (
