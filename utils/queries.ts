@@ -11,7 +11,7 @@ export const allPostsQuery = () => {
       userId,
       postedBy->{
         _id,
-        userName,
+        username,
         image
       },
     likes,
@@ -20,7 +20,7 @@ export const allPostsQuery = () => {
       _key,
       postedBy->{
       _id,
-      userName,
+      username,
       image
     },
     }
@@ -42,7 +42,7 @@ export const postDetailQuery = (postId: string | string[]) => {
       userId,
     postedBy->{
       _id,
-      userName,
+      username,
       image
     },
      likes,
@@ -71,7 +71,7 @@ export const searchPostsQuery = (searchTerm: string | string[]) => {
       userId,
     postedBy->{
       _id,
-      userName,
+      username,
       image
     },
 likes,
@@ -80,7 +80,7 @@ likes,
       _key,
       postedBy->{
       _id,
-      userName,
+      username,
       image
     },
     }
