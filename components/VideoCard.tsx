@@ -32,6 +32,13 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
         }
     }
 
+    useEffect(() => {
+        if (videoRef?.current) {
+            videoRef.current.muted = isVideoMuted
+        }
+    }, [isVideoMuted])
+
+
 
 
     return (
@@ -73,7 +80,13 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
                 </div>
 
             </div>
+
+
+            <div className='relative w-[1000px] md:w-[900px] lg:[700px]'>
+                <div className='lg:mt-20 mt-10'></div>
+            </div>
         </div>
     )
 }
+
 export default VideoCard

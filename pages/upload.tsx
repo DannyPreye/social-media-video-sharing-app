@@ -19,7 +19,7 @@ const Upload = () => {
     const [vidoeAsset, setVideoAsset] = useState<SanityAssetDocument | undefined>()
     const [wrongFileType, setWrongFileType] = useState(false)
     const [caption, setCaption] = useState('')
-    const [category, setCategory] = useState<any>(topics[0])
+    const [category, setCategory] = useState(topics[0])
     const [savingPost, setSavingPost] = useState(false)
 
     console.log(userProfile)
